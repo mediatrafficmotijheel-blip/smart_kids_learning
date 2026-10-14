@@ -35,10 +35,11 @@ class AppTheme {
   }
 
   static ThemeData _base(ColorScheme scheme) {
-    final base = ThemeData(
+        final base = ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
       visualDensity: VisualDensity.standard,
+      fontFamily: 'NotoBengali',
     );
 
     return base.copyWith(

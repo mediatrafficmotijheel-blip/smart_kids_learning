@@ -30,4 +30,9 @@ flutter:
     - assets/images/
     - assets/audio/
 
+  fonts:
+    - family: NotoBengali
+      fonts:
+        - asset: assets/fonts/NotoSansBengali.ttf
+
   generate: true

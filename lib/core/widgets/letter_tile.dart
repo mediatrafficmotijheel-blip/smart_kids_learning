@@ -71,6 +71,7 @@ class _LetterTileState extends State<LetterTile>
           child: Text(
             widget.letter,
             style: const TextStyle(
+              fontFamily: 'NotoBengali',
               fontSize: 44,
               fontWeight: FontWeight.w800,
               color: Colors.white,
