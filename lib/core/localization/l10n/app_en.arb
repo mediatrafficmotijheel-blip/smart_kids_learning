@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "appTitle": "Smart Kids Learning",
+  "homeTitle": "Home",
+  "homeWelcome": "Welcome, little learner!",
+  "homeSubtitle": "Pick a fun activity to start.",
+  "learn": "Learn",
+  "quiz": "Quiz",
+  "progress": "Progress",
+  "settings": "Settings",
+  "comingSoon": "Coming soon",
+  "language": "Language",
+  "english": "English",
+  "bengali": "à¦¬à¦¾à¦‚à¦²à¦¾",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System"
+}

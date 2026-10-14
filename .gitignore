@@ -1,0 +1,33 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+**/generated_plugins.cmake
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.fleet/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Localization generated output
+lib/core/localization/generated/
+
+# Android signing
+android/key.properties
+*.jks
+*.keystore
+
+# Coverage
+coverage/
