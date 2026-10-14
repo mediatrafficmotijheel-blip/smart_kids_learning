@@ -5,15 +5,11 @@ class AppScaffold extends StatelessWidget {
     super.key,
     this.title,
     required this.body,
-    this.actions,
-    this.floatingActionButton,
     this.bottomNavigationBar,
   });
 
   final String? title;
   final Widget body;
-  final List<Widget>? actions;
-  final Widget? floatingActionButton;
   final Widget? bottomNavigationBar;
 
   @override
@@ -31,8 +27,6 @@ class AppScaffold extends StatelessWidget {
           },
         ),
       ),
-      actions: actions,
-      floatingActionButton: floatingActionButton,
       bottomNavigationBar: bottomNavigationBar,
     );
   }
