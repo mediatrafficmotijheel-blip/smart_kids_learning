@@ -44,7 +44,7 @@ class ProgressService extends ChangeNotifier {
     _entries[entry.lessonId] = entry;
     final prefs = _prefs;
     if (prefs != null) {
-      final key = '\\';
+      final key = '${AppConstants.prefProgressPrefix}${entry.lessonId}';
       await prefs.setString(
         key,
         jsonEncode({

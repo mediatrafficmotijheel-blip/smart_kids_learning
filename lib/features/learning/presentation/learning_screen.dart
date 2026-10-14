@@ -50,7 +50,7 @@ class _LessonTile extends StatelessWidget {
       onTap: () {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('\  \'),
+            content: Text('${lesson.emoji}  ${l10n.comingSoon}'),
           ),
         );
       },
@@ -65,7 +65,7 @@ class _LessonTile extends StatelessWidget {
                 Text(lesson.id, style: theme.textTheme.titleMedium),
                 const SizedBox(height: 4),
                 Text(
-                  '\ items',
+                  '${lesson.totalItems} items',
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: theme.colorScheme.onSurfaceVariant,
                   ),

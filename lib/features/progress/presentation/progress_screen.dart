@@ -49,7 +49,7 @@ class ProgressScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       LinearProgressIndicator(value: entry.ratio),
                       const SizedBox(height: 6),
-                      Text('\ / \'),
+                      Text('${entry.completedCount} / ${entry.totalCount}'),
                     ],
                   ),
                 );

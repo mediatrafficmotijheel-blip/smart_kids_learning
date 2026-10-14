@@ -56,7 +56,6 @@ class SettingsScreen extends StatelessWidget {
       case ThemeMode.dark:
         return l10n.dark;
       case ThemeMode.system:
-      default:
         return l10n.system;
     }
   }
@@ -66,28 +65,29 @@ class SettingsScreen extends StatelessWidget {
     SettingsService settings,
   ) async {
     final l10n = AppLocalizations.of(context);
+    final current = settings.locale?.languageCode ?? 'en';
+
     final selected = await showModalBottomSheet<String>(
       context: context,
       showDragHandle: true,
       builder: (context) {
-        final current = settings.locale?.languageCode ?? 'en';
         return SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RadioListTile<String>(
-                value: 'en',
-                groupValue: current,
-                title: Text(l10n.english),
-                onChanged: (v) => Navigator.pop(context, v),
-              ),
-              RadioListTile<String>(
-                value: 'bn',
-                groupValue: current,
-                title: Text(l10n.bengali),
-                onChanged: (v) => Navigator.pop(context, v),
-              ),
-            ],
+          child: RadioGroup<String>(
+            groupValue: current,
+            onChanged: (v) => Navigator.pop(context, v),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                RadioListTile<String>(
+                  value: 'en',
+                  title: Text(l10n.english),
+                ),
+                RadioListTile<String>(
+                  value: 'bn',
+                  title: Text(l10n.bengali),
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -107,28 +107,26 @@ class SettingsScreen extends StatelessWidget {
       showDragHandle: true,
       builder: (context) {
         return SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RadioListTile<ThemeMode>(
-                value: ThemeMode.system,
-                groupValue: settings.themeMode,
-                title: Text(l10n.system),
-                onChanged: (v) => Navigator.pop(context, v),
-              ),
-              RadioListTile<ThemeMode>(
-                value: ThemeMode.light,
-                groupValue: settings.themeMode,
-                title: Text(l10n.light),
-                onChanged: (v) => Navigator.pop(context, v),
-              ),
-              RadioListTile<ThemeMode>(
-                value: ThemeMode.dark,
-                groupValue: settings.themeMode,
-                title: Text(l10n.dark),
-                onChanged: (v) => Navigator.pop(context, v),
-              ),
-            ],
+          child: RadioGroup<ThemeMode>(
+            groupValue: settings.themeMode,
+            onChanged: (v) => Navigator.pop(context, v),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                RadioListTile<ThemeMode>(
+                  value: ThemeMode.system,
+                  title: Text(l10n.system),
+                ),
+                RadioListTile<ThemeMode>(
+                  value: ThemeMode.light,
+                  title: Text(l10n.light),
+                ),
+                RadioListTile<ThemeMode>(
+                  value: ThemeMode.dark,
+                  title: Text(l10n.dark),
+                ),
+              ],
+            ),
           ),
         );
       },

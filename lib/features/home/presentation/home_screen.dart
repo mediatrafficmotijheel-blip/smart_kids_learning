@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [
-                const Text('ðŸŽ“', style: TextStyle(fontSize: 40)),
+                const Text('🎓', style: TextStyle(fontSize: 40)),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Column(
@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
           _HomeTile(
             icon: Icons.trending_up,
             title: l10n.progress,
-            subtitle: '\ saved',
+            subtitle: '$progressEntries saved',
             color: theme.colorScheme.tertiaryContainer,
             onTap: () => Navigator.push(
               context,

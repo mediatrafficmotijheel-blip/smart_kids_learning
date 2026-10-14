@@ -118,7 +118,7 @@ class _QuestionView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16),
       children: [
         SectionHeader(
-          title: 'Question \ / \',
+          title: 'Question ${index + 1} / $total',
           subtitle: question.prompt,
         ),
         const SizedBox(height: 16),
@@ -195,11 +195,11 @@ class _ResultView extends StatelessWidget {
         AppCard(
           child: Column(
             children: [
-              const Text('ðŸŽ‰', style: TextStyle(fontSize: 48)),
+              const Text('🎉', style: TextStyle(fontSize: 48)),
               const SizedBox(height: 12),
               Text('Score', style: theme.textTheme.titleMedium),
               const SizedBox(height: 4),
-              Text('\ / \', style: theme.textTheme.headlineMedium),
+              Text('$correct / $total', style: theme.textTheme.headlineMedium),
             ],
           ),
         ),
